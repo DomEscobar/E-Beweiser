@@ -1,0 +1,10 @@
+<app-loading></app-loading>
+<app-navigation></app-navigation>
+
+<div class="container" style="max-width: 850px;" [style.marginTop.px]="BlockstackService.user?50:0">
+    <router-outlet></router-outlet>
+</div>
+
+<ng-container *ngIf="Popup.isOnShow">
+    <check-popup></check-popup>
+</ng-container>

@@ -1,0 +1,12 @@
+<div style="text-align: center;">
+    <label>{{'Proof' | translate}}</label><br>
+    <img #imageElement [src]="imgSrc" (click)="openUpload()" />
+    <input #fileUpload style="opacity: 0;" type="file" (change)="handleFileSelect($event)">
+</div>
+
+<div style="text-align: center; margin-top: 40px;">
+    <signature-pad [options]="signaturePadOptions" (onEndEvent)="drawComplete()">
+    </signature-pad>
+    <br>
+    <label>{{'Signature' | translate}}</label>
+</div>

@@ -1,0 +1,23 @@
+<div class="logout" (click)="logout()">{{'logout' | translate}}</div>
+<h2>{{'About me'|translate}}</h2>
+
+<div class="row">
+    <div class="form-group col-sm-12 col-md-6">
+        <label>{{'Firstname'|translate}}</label>
+        <input type="text" [(ngModel)]="user.firstname" class="form-control">
+    </div>
+
+    <div class="form-group col-sm-12 col-md-6">
+        <label>{{'Lastname'|translate}}</label>
+        <input type="text" [(ngModel)]="user.lastname" class="form-control">
+    </div>
+
+    <div class="form-group col-sm-12 col-md-6">
+        <label>{{'Birth'|translate}}</label>
+        <input type="date" [(ngModel)]="user.birth" class="form-control">
+    </div>
+</div>
+
+<div style="text-align: center;">
+    <button class="btn btn-success btn-large" (click)="save()">{{'Save'|translate}}</button>
+</div>

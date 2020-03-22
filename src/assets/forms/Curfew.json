@@ -1,0 +1,30 @@
+[
+    {
+        "type": "title",
+        "text": "Ausgangssperre"
+    },
+    {
+        "type": "text",
+        "text": "bestätigen, dass meine Bewegung mit dem folgenden Grund zusammenhängt (das Kästchen ankreuzen), der durch Artikel 1 des Erlasses vom 16. März 2020 zur Regelung der Bewegungen im Rahmen des Kampfes gegen die Verbreitung des Covid-19-Virus genehmigt wurde: "
+    },
+    {
+        "type": "checkbox",
+        "text": "Reisen zwischen dem Wohnort und dem Ort der beruflichen Tätigkeit, wenn sie für die Ausübung von Tätigkeiten, die nicht in Form von Telearbeit (auf dauerhaften Nachweis) oder unaufschiebbaren beruflichen Reisen organisiert werden können, unerlässlich sind; "
+    },
+    {
+        "type": "checkbox",
+        "text": "Reisen, um wesentliche Einkäufe in autorisierten Einrichtungen zu tätigen"
+    },
+    {
+        "type": "checkbox",
+        "text": "Reisen aus gesundheitlichen Gründen"
+    },
+    {
+        "type": "checkbox",
+        "text": "Reisen aus dringenden familiären Gründen, zur Hilfe für gefährdete Personen oder zur Kinderbetreuung"
+    },
+    {
+        "type": "checkbox",
+        "text": "kurze Reisen, in der Nähe des Wohnortes, im Zusammenhang mit individueller körperlicher Aktivität, unter Ausschluss jeglicher kollektiver sportlicher Betätigung, und mit den Bedürfnissen von Haustieren."
+    }
+]

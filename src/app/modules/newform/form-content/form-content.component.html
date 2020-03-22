@@ -1,0 +1,22 @@
+<!--Hmm bad-->
+<div *ngFor="let formObject of formObjects">
+    <div [ngSwitch]="formObject.type">
+
+        <div class="content" *ngSwitchCase="formObjectType.TEXT">
+            <label>{{formObject.text}}</label>
+        </div>
+
+        <div class="content" *ngSwitchCase="formObjectType.TITLE">
+            <h1>{{formObject.text}}</h1>
+        </div>
+
+        <div class="content" *ngSwitchDefault>
+            <label class="container">{{formObject.text}}
+                <input type="checkbox" [(ngModel)]="formObject.checked" (change)="updateFormObjects()">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+</div>
+<br>
+<br>

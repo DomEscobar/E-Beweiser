@@ -1,0 +1,26 @@
+<div class="content">
+    <div style="float:right;">
+        <label>{{'Date' | translate}}</label>
+        <p>{{documentDetail.date | amDateFormat: 'DD.MM.YYYY'}}</p>
+    </div>
+
+    <label>{{'Firstname' | translate}}, {{'Lastname' | translate}}</label>
+    <p>{{documentDetail.firstname}}, {{documentDetail.lastname}}</p>
+
+    <label>{{'Birth' | translate}}</label>
+    <p>{{documentDetail.birth | amDateFormat: 'DD.MM.YYYY'}}</p>
+
+
+    <app-form-content [formObjects]="documentDetail.formObjects"></app-form-content>
+
+    <hr>
+    <div style="margin-bottom: 20px;    padding: 5px;">
+        <label>{{'Proof' | translate}}</label><br>
+        <img class="proofimg" [src]="documentDetail.image">
+    </div>
+
+    <div style="margin-bottom: 60px;    padding: 5px;">
+        <img class="signature" [src]="documentDetail.signature"><br>
+        <label>{{'Signature' | translate}}</label>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<ng-container *ngIf="NewFormService.step==0">
+    <app-type-selection></app-type-selection>
+</ng-container>
+
+<ng-container *ngIf="NewFormService.step==1">
+    <app-form-content></app-form-content>
+</ng-container>
+
+<ng-container *ngIf="NewFormService.step==2">
+    <app-form-proof></app-form-proof>
+</ng-container>
+
+<ng-container *ngIf="NewFormService.step==3&&NewFormService.documentDetail">
+    <app-document-detail [documentDetail]="NewFormService.documentDetail"> </app-document-detail>
+</ng-container>
+
+<app-new-form-footer></app-new-form-footer>

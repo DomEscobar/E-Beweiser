@@ -1,0 +1,13 @@
+{
+  "name": "E - Beweiser",
+  "short_name": "E - Beweiser",
+  "description": "E - Beweiser",
+  "icons": [
+    {
+      "src": "https://nokol.net/ebeweiser/favicon.ico",
+      "sizes": "400x400",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "http://nokol.net/ebeweiser"
+}

@@ -1,0 +1,14 @@
+<ng-container *ngIf="showOptions">
+  <div class="option-box" [style.width.px]="width">
+    <div class="option-item {{getSelected() == option[property] ? 'selected-item' : ''}}" *ngFor="let option of options"
+      (click)="select(option)">
+      {{option[property] | translate}}
+    </div>
+  </div>
+</ng-container>
+
+<div #selectbox class="selectBox" (click)="showOptions=true; calcWidth();">
+  <p *ngIf="selected">{{getSelected()| translate}}
+  </p>
+  <input *ngIf="!withBorder" (focus)="focusme()" [value]="getSelected()" />
+</div>

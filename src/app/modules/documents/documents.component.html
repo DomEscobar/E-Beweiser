@@ -1,0 +1,29 @@
+<div class="docoment-content" *ngFor="let document of BlockstackService.documents"
+    (click)="selectedDocumentDetail=document">
+    <div style="line-height: 25px;">
+        {{document.date | amDateFormat: 'DD.MM.YYYY'}}
+    </div>
+    <div class="title">
+        {{document.type.fromtype | translate}}
+    </div>
+</div>
+
+<ng-container *ngIf="selectedDocumentDetail">
+    <div class="popupFake">
+        <div class="container" style="max-width: 850px;">
+
+            <div class="closeIco" (click)="selectedDocumentDetail=null">
+                X
+            </div>
+
+            <app-document-detail [documentDetail]="selectedDocumentDetail"> </app-document-detail>
+
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="BlockstackService.documents == null || BlockstackService.documents.length==0">
+    <br>
+    <br>
+    <h3>{{'No documents' |translate}}</h3>
+</ng-container>

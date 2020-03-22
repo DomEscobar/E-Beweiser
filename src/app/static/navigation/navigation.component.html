@@ -1,0 +1,7 @@
+<ng-container *ngIf="BlockstackService.user">
+    <nav>
+        <a [routerLink]="['/about']">{{'About me' | translate}} </a>
+        <a [routerLink]="['/documents']">{{'Documents' | translate}} </a>
+        <a [routerLink]="['/new']" class="newButton">{{'+ New' | translate}} </a>
+    </nav>
+</ng-container>
