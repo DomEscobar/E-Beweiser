@@ -42,9 +42,8 @@ export class AboutMeComponent implements OnInit
 
   public logout(): void
   {
-    this.BlockstackService.getUsersession().signUserOut();
     this.BlockstackService.user = null;
     localStorage.clear();
-    this.router.navigate(['/login']);
+    this.router.navigate(['']);
   }
 }

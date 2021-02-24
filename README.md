@@ -3,11 +3,11 @@
 <!-- PROJECT LOGO -->
 <p align="center">
 
-  <h1 align="center">   E-Beweiser - Your electron proof</h1>
+  <h1 align="center">   E-Beweiser - Your electronic proof</h1>
   <center>
-  <img src="https://nokol.net/ebeweiser/assets/start.png" alt="Logo" width="80" height="80" style="vertical-align:bottom;">
+  <img src="https://e-beweiser-b1ezxl3gc-domescobar.vercel.app/assets/start.png" alt="Logo" width="80" height="80" style="vertical-align:bottom;">
   <h2>
-    <a href="https://nokol.net/ebeweiser">View Demo</a>
+    <a href="https://e-beweiser-b1ezxl3gc-domescobar.vercel.app/">View Demo</a>
     </h2>
 </center>
   <p align="center">

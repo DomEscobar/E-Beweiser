@@ -34,7 +34,7 @@ export class BlockstackService
   public getUsersession(): UserSession
   {
     const appConfig = new AppConfig(['store_write', 'publish_data']);
-    appConfig.appDomain = 'https://nokol.net/ebeweiser';
+    appConfig.appDomain = 'https://e-beweiser-b1ezxl3gc-domescobar.vercel.app';
     appConfig.manifestPath = '/manifest.json';
 
     return new UserSession({ appConfig: appConfig });

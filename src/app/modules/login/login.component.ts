@@ -13,20 +13,37 @@ export class LoginComponent implements AfterViewInit
 
   constructor(
     private router: Router,
-    private BlockstackService: BlockstackService) { }
+    private BlockstackService: BlockstackService)
+  {
+  }
+
+  async ngOnInit()
+  {
+    if (this.BlockstackService.getUsersession().handlePendingSignIn())
+    {
+      this.BlockstackService.user = this.BlockstackService.getUsersession().loadUserData();
+      await this.BlockstackService.initDocuments();
+      this.router.navigate(['/documents']);
+    }
+  }
 
   ngAfterViewInit(): void
   {
-    if (this.BlockstackService.getUsersession().isUserSignedIn())
+    setTimeout(async () =>
     {
-      this.router.navigate(['/documents']);
-    }
+      if (this.BlockstackService.getUsersession().isUserSignedIn())
+      {
+        this.BlockstackService.user = this.BlockstackService.getUsersession().loadUserData();
+        await this.BlockstackService.initDocuments();
+        this.router.navigate(['/documents']);
+      }
+    }, 1000);
   }
 
   public signIn()
   {
     const authOptions = {
-      redirectTo: 'https://nokol.net/ebeweiser',
+      redirectTo: '/ebeweiser',
       userSession: this.BlockstackService.getUsersession(),
       finished: async ({ userSession }) =>
       {
@@ -34,10 +51,10 @@ export class LoginComponent implements AfterViewInit
         await this.BlockstackService.initDocuments();
         this.router.navigate(['/documents']);
       },
-      manifestPath: 'https://nokol.net/ebeweiser',
+      manifestPath: 'https://e-beweiser-b1ezxl3gc-domescobar.vercel.app/ebeweiser',
       appDetails: {
         name: 'E - Beweiser',
-        icon: 'https://nokol.net/ebeweiser/assets/start.png',
+        icon: 'https://e-beweiser-b1ezxl3gc-domescobar.vercel.app/assets/start.png',
       },
     };
 
